@@ -1,0 +1,13 @@
+cpu		: PPC970FX, altivec supported
+clock		: 1800.000000MHz
+revision	: 3.0 (pvr 003c 0300)
+motherboard	: PowerMac9,1 MacRISC4 Power Macintosh 
+detected as	: 337 (PowerMac G5)
+L2 cache	: 512K unified
+
+released: 2004
+
+-O3 -mcpu=G5 -m64
+
+gcc (Debian 4.9.2-10) 4.9.2
+Debian GNU/Linux 8 - ppc64

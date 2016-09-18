@@ -1,0 +1,11 @@
+cpu family      : 6
+model           : 69
+model name      : Intel(R) Core(TM) i5-4250U CPU @ 1.30GHz
+stepping        : 1
+microcode       : 0x1c
+cache size      : 3072 KB
+
+released: 2013
+
+CentOS 7 x86_64
+gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-4)

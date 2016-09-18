@@ -1,0 +1,12 @@
+cpu family      : 16
+model           : 2
+model name      : AMD Phenom(tm) 9750 Quad-Core Processor
+stepping        : 3
+microcode       : 0x1000083
+cache size      : 512 KB
+cpu MHz         : 2400.000
+
+released: 2007
+
+CentOS 7 x86_64
+gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-4)

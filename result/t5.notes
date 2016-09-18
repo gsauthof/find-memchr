@@ -1,0 +1,13 @@
+SPARC-T5, clock 3600 MHz
+
+released: 2013
+
+Solaris 10
+
+GCC 4.9.2 (OpenCSW)
+gcc flags: -std=c++11 -O3 -m64 -mcpu=niagara4
+
+Solaris Studio 12.3 (Sun STL)
+(C++11 features replaced in test programs where necessary )
+SS flags: -xtarget=native64 -xO5
+
