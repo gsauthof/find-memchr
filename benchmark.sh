@@ -15,7 +15,7 @@ exes_avx='find_avx2_overflow
       find_avx2
       find_avx2_overflow_ext find_avx2_align find_avx2_align2
       find_avx2_more
-      find_avx2_loop'
+      find_avx2_loop find_avx2_memcpy'
 exes=$exes_mini
 
 time=/usr/bin/time
