@@ -12,7 +12,7 @@ CXXFLAGS += -fstrict-aliasing -Wstrict-aliasing
 .PHONY: all all-mini all-x86 all-sse all-avx
 all: all-mini all-x86 all-sse all-avx
 all-mini: find_find find_memchr \
-     find_naive find_musl find_uclibc find_unroll
+     find_naive find_musl find_uclibc find_unroll find_unroll2
 all-x86: find_uclibcx86
 all-sse: find_diet find_sse
 all-avx: find_avx2_overflow \
@@ -42,6 +42,7 @@ $(eval $(call mk-main,find_avx2_align2,find_avx2_align2_impl.o find_main.o))
 $(eval $(call mk-main,find_avx2_more,find_avx2_more_impl.o find_main.o))
 $(eval $(call mk-main,find_avx2_memcpy,find_avx2_memcpy_impl.o find_main.o))
 $(eval $(call mk-main,find_unroll,find_unroll_impl.o find_main.o))
+$(eval $(call mk-main,find_unroll2,find_unroll2_impl.o find_main.o))
 
 TEMP += dietlibc_memchr.o
 TEMP += find_main.o

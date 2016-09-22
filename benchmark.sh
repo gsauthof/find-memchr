@@ -6,7 +6,7 @@ set -eu
 
 
 exes_mini='find_find find_memchr
-      find_naive find_musl find_uclibc
+      find_naive find_musl find_uclibc find_unroll
       '
 exes_x86='find_uclibcx86'
 exes_sse='find_diet find_sse'
@@ -110,6 +110,7 @@ function measure
 
 gen_input
 configure
+exes=find_unroll2
 setup
 check
 measure | tee "$result"
