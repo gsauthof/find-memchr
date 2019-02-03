@@ -14,8 +14,7 @@ exes_avx='find_avx2_overflow
       find_avx2_nozero
       find_avx2
       find_avx2_overflow_ext find_avx2_align find_avx2_align2
-      find_avx2_more
-      find_avx2_loop find_avx2_memcpy'
+      find_avx2_loop'
 exes=$exes_mini
 
 time=/usr/bin/time
@@ -110,7 +109,7 @@ function measure
 
 gen_input
 configure
-exes=find_unroll2
+#exes=find_avx2
 setup
 check
 measure | tee "$result"

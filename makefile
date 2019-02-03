@@ -17,8 +17,7 @@ all-x86: find_uclibcx86
 all-sse: find_diet find_sse
 all-avx: find_avx2_overflow \
      find_avx2 find_avx2_overflow_ext find_avx2_align \
-     find_avx2_align2 find_avx2_more find_avx2_loop \
-     find_avx2_memcpy
+     find_avx2_align2 find_avx2_loop
 
 LINK.o = $(CXX) $(LDFLAGS) $(TARGET_ARCH)
 
@@ -39,8 +38,6 @@ $(eval $(call mk-main,find_sse,find_sse_impl.o find_main.o))
 $(eval $(call mk-main,find_avx2_overflow_ext,find_avx2_overflow_impl.o find_main.o))
 $(eval $(call mk-main,find_avx2_align,find_avx2_align_impl.o find_main.o))
 $(eval $(call mk-main,find_avx2_align2,find_avx2_align2_impl.o find_main.o))
-$(eval $(call mk-main,find_avx2_more,find_avx2_more_impl.o find_main.o))
-$(eval $(call mk-main,find_avx2_memcpy,find_avx2_memcpy_impl.o find_main.o))
 $(eval $(call mk-main,find_unroll,find_unroll_impl.o find_main.o))
 $(eval $(call mk-main,find_unroll2,find_unroll2_impl.o find_main.o))
 

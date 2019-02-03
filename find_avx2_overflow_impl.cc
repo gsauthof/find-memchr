@@ -15,8 +15,7 @@ namespace g {
     __m256i q = _mm256_set1_epi8(c);
 
     for (; i < e; i+=32) {
-      __m256i x = _mm256_lddqu_si256(
-          reinterpret_cast<const __m256i*>(i));
+      __m256i x = _mm256_lddqu_si256(reinterpret_cast<const __m256i*>(i));
       __m256i r = _mm256_cmpeq_epi8(x, q);
       int z = _mm256_movemask_epi8(r);
       if (z) {

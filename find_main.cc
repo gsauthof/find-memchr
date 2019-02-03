@@ -14,16 +14,26 @@
 using namespace std;
 
 namespace x {
-  int open(const char *f, int flags) {
+  int open(const char *f, int flags)
+  {
     auto r = ::open(f, flags);
-    if (r == -1) throw runtime_error(strerror(errno)); return r; }
-  ssize_t read(int fd, void *b, size_t n) {
+    if (r == -1)
+        throw runtime_error(strerror(errno));
+    return r;
+  }
+  ssize_t read(int fd, void *b, size_t n)
+  {
     auto r = ::read(fd, b, n);
-    if (r == -1) throw runtime_error(strerror(errno)); return r; }
-  off_t lseek(int fd, off_t off, int w) {
+    if (r == -1)
+        throw runtime_error(strerror(errno));
+    return r;
+  }
+  off_t lseek(int fd, off_t off, int w)
+  {
     auto r = ::lseek(fd, off, w);
     if (r == (off_t)-1) throw runtime_error(strerror(errno));
-    return r; }
+    return r;
+  }
 }
 
 #ifdef FIND_INCLUDE
